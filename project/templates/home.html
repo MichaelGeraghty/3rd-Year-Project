@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+	<body>
+	<center>
+	<!-- allows user to redirect to the add a post page-->
+	<a href="new_post">Add post</a>
+	<!-- for loop that loops through the database and returns all posts ordered byu latest posts-->
+	{% for post in posts %}
+		<h1>{{post.title}}</h1>
+		<!-- prints the formatted time of submission to the database of the specific post --> 
+		<h4>Posted at: {{post.date.strftime('%m/%d/%Y at %H:%M%p')}}</h4>
+		<p>{{post.text}}</p>
+		<br>
+	{% endfor %}
+	</center>
+	</body>
+</html>
