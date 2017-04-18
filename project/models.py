@@ -7,7 +7,7 @@ import datetime
 
 #db = SqliteDatabase('posts.db')
 #entries db with two test entries
-db = SqliteDatabase('entries.db')
+db = SqliteDatabase('entries.sql')
 
 class Post(Model):
 	id = PrimaryKeyField()
@@ -18,6 +18,8 @@ class Post(Model):
 	title = CharField()
 	#text field for the post being exponentially larger
 	text = TextField()
+	#text field for the post being exponentially larger
+	content = TextField()
 	#specifies the db created
 	class Meta:
 		database = db

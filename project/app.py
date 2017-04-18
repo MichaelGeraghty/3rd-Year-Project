@@ -32,7 +32,8 @@ def create_post():
 	#creates the new post
 	Post.create(
 		title=request.form['title'],
-		text=request.form['text']
+		text=request.form['text'],
+		content=request.form['content']
 	)
 	#allows the redirection back to home even if '/' is replaced ie will always redirect home
 	return redirect(url_for('home'))
