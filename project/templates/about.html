@@ -1,9 +1,7 @@
 <!doctype html>
 <html lang="en">
 	<head>
-	
-		<style>
-		
+		<style>	
 		p{ line-height: 1em; }
 		h1, h2, h3, h4{
 			color: orange;
@@ -76,7 +74,7 @@
 		/* multiple styles seperated by a , */
 		#content,
 		ul li a{ box-shadow: 0px 1px 1px #999; }
-		
+
 		.sidenav {
 			height: 100%;
 			width: 0;
@@ -116,6 +114,7 @@
 		  .sidenav a {font-size: 18px;}
 		}
 		
+		
 		</style>
 		<link href="style.css" rel="stylesheet" type="text/css" />
 		
@@ -123,27 +122,16 @@
 			
 		</script>
 		
-		<script>
-			function openNav() {
-				document.getElementById("mySidenav").style.width = "250px";
-			}
-
-			function closeNav() {
-				document.getElementById("mySidenav").style.width = "0";
-			}
-			</script>
-		
 	</head>
 		<body>
 			<div id="mySidenav" class="sidenav">
 			  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-			  <a href="">Home</a>
-			  <a href="new_post">New Post</a>
-			  <a href="about">About</a>
+			  <a href="/">Home</a>
+			  <a href="/new_post/">New Post</a>
+			  <a href="">About</a>
 			</div>
 			
 			<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
-			
 			<div id="page">
 				<div id="logo">
 					<h1><a href="/" id="logoLink">Memo.com</a></h1>
@@ -154,33 +142,31 @@
 						<li><a href="/new_post/">New Post</a></li>
 						<li><a href="/about/">About</a></li>
 					</ul>	
-			</div>
-			
-			<div id="content">
-			<center>
-		<!-- allows user to redirect to the add a post page-->
-		
-		<!-- for loop that loops through the database and returns all posts ordered byu latest posts-->
-			{% for post in posts %}
-				<h1>{{post.title}}</h1>
-				<!-- prints the formatted time of submission to the database of the specific post --> 
-				<h4>Posted at: {{post.date.strftime('%m/%d/%Y at %H:%M%p')}}</h4>
-				<p>{{post.text}}</p>
-				<p>{{post.content}}</p>
-				<br>
-			{% endfor %}
-			</center>
+				</div>
+				<div id="content">
+			<h2>About</h2>
+			<p>
+				This is a dynamic web application utilising the flask framework and peewee database system. Using Html SQL Css Python.
+			</p>
 		</div>
-				<div id="footer">
+		<div id="footer">
 			<p>
 				Github Repositry <a href="https://github.com/MichaelGeraghty/3rd-Year-Project.git" target="_blank">Link</a>
 			</p>
-			</div>
 		</div>
+	</div>
 
+			<script>
+			function openNav() {
+				document.getElementById("mySidenav").style.width = "250px";
+			}
+
+			function closeNav() {
+				document.getElementById("mySidenav").style.width = "0";
+			}
+			</script>
 			
-			
-		
+		<center>
 		
 		
 		</body>

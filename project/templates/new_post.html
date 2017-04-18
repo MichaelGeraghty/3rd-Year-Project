@@ -1,10 +1,79 @@
 <!doctype html>
 <html>
 	<style>
-			body {
-				font-family: "Lato", sans-serif;
+	p{ line-height: 1em; }
+		h1, h2, h3, h4{
+			color: orange;
+			font-weight: normal;
+			line-height: 1.1em;
+			margin: 0 0 .5em 0;
+		}
+		h1{ font-size: 1.7em; }
+		h2{ font-size: 1.5em; }
+		a{
+			color: black;
+			text-decoration: none;
+		}
+			a:hover,
+			a:active{ text-decoration: underline; }
+			
+		body{
+			font-family: arial; font-size: 80%; line-height: 1.2em; width: 100%; margin: 0; background: #9ed6ed;
+		}
+		/* you can put your code all in one line like above */
+		#page{ margin: 20px; }
+
+		/* or on different lines like below */
+		#logo{
+			width: 35%;
+			margin-top: 5px;
+			font-family: georgia;
+			display: inline-block;
+		}
+		/* but try and be as concise as possible */
+		#nav{
+			width: 60%;
+			display: inline-block;
+			text-align: right;
+			float: right;
+		}
+			#nav ul{}
+				#nav ul li{
+					display: inline-block;
+					height: 62px;
+				}
+					#nav ul li a{
+						padding: 20px;
+						background: orange;
+						color: white;
+					}
+					#nav ul li a:hover{
+						background-color: #ffb424;
+						box-shadow: 0px 1px 1px #666;
+					}
+					#nav ul li a:active{ background-color: #ff8f00; }
+
+		#content{
+			margin: 30px 0;
+			background: white;
+			padding: 20px;
+			clear: both;
+		}
+		#footer{
+			border-bottom: 1px #ccc solid;
+			margin-bottom: 10px;
+		}
+			#footer p{
+				text-align: right;
+				text-transform: uppercase;
+				font-size: 80%;
+				color: grey;
 			}
 
+		/* multiple styles seperated by a , */
+		#content,
+		ul li a{ box-shadow: 0px 1px 1px #999; }
+		
 			.sidenav {
 				height: 100%;
 				width: 0;
@@ -55,9 +124,45 @@
 		  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 		  <a href="/">Home</a>
 		  <a href="">New Post</a>
+		  <a href="/about/">About</a>
 		</div>
 			
 		<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+		<div id="page">
+				<div id="logo">
+					<h1><a href="/" id="logoLink">Memo.com</a></h1>
+				</div>
+				<div id="nav">
+					<ul>
+						<li><a href="/">Home</a></li>
+						<li><a href="/new_post/">New Post</a></li>
+						<li><a href="/about/">About</a></li>
+					</ul>	
+				</div>
+				<div id="content">
+				
+			<h2>Add New Post</h2>
+			<p>
+				Enter the title of your memo your name and the content below. When finished click post.
+			</p>
+			
+			<center>
+		<form action="/create/" method="Post" id="usrform">
+		<br>
+			<br>Title: <input type="text" name="title"><br><br>
+			User: <input type="text" name="text"><br>
+			<br><textarea rows="4" cols="50" type="text" name="content" placeholder="Enter text here" ></textarea><br>
+			<!-- calls the post method of create in models to post the blog to the database-->
+			<br><input type="submit" value="Post">
+		</form>
+		</center>
+		</div>
+		<div id="footer">
+			<p>
+				Github Repositry <a href="https://github.com/MichaelGeraghty/3rd-Year-Project.git" target="_blank">Link</a>
+			</p>
+		</div>
+		</div>
 		
 		<script>
 		function openNav() {
@@ -69,15 +174,7 @@
 		}
 		</script>
 
-		<center>
-		<form action="/create/" method="Post" id="usrform">
-			<br>Title: <input type="text" name="title"><br>
-			User: <input type="text" name="text"><br>
-			<br><textarea rows="4" cols="50" type="text" name="content" placeholder="Enter text here" ></textarea><br>
-			<!-- calls the post method of create in models to post the blog to the database-->
-			<br><input type="submit" value="Post">
-		</form>
-		</center>
+		
 	
 	</body>
 </html>

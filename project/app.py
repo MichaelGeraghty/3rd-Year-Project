@@ -24,6 +24,11 @@ def home():
 @app.route('/new_post/')
 def new_post():
 	return render_template('new_post.html')
+	
+#about.html for information about site
+@app.route('/about/')
+def about():
+	return render_template('about.html')
 
 #To post into the database
 #only allows a post method not accessable from users
