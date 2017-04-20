@@ -5,7 +5,7 @@ http://g00325746.pythonanywhere.com/
 
 Dynamic web app involving a memo post system
 
-
+USER GUIDE contained in the about section of site.
 USER GUIDE FOR INSTALLATION
 
 Download Python3.6.1 from python.org
