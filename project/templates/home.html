@@ -118,14 +118,7 @@
 		
 		</style>
 		<link href="style.css" rel="stylesheet" type="text/css" />
-		<script>
-		  function signOut() {
-			var auth2 = gapi.auth2.getAuthInstance();
-			auth2.signOut().then(function () {
-			  console.log('User signed out.');
-			});
-		  }
-		</script>
+	
 		<script src="https://apis.google.com/js/platform.js" async defer></script>
 		
 		<script>
@@ -144,7 +137,13 @@
 				  console.log('Image URL: ' + profile.getImageUrl());
 				  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
 			}
-			</script>
+			function signOut() {
+			var auth2 = gapi.auth2.getAuthInstance();
+			auth2.signOut().then(function () {
+			  console.log('User signed out.');
+			});
+			}
+		</script>
 			
 			
 			<meta name="google-signin-client_id" content="909922020205-54pe0n1lee2eukupnga4ecp74ck4psq7.apps.googleusercontent.com">
@@ -192,9 +191,6 @@
 				<a href="#" onclick="signOut();">Sign out</a>
 			<p>
 				Github Repositry <a href="https://github.com/MichaelGeraghty/3rd-Year-Project.git" target="_blank">Link</a>
-			</p>
-			<p>
-				BasicProfile.getEmail();
 			</p>
 			</div>
 			
