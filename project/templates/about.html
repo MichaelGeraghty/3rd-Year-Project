@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 	<head>
+	<!--Style for the paragraphs headers body and nav tags used throughout page-->
 		<style>	
 		p{ line-height: 1em; }
 		h1, h2, h3, h4{
@@ -117,13 +118,23 @@
 		
 		</style>
 		<link href="style.css" rel="stylesheet" type="text/css" />
-		
+		<!--Scripts used in page -->
+		<script>
+		function openNav() {
+			document.getElementById("mySidenav").style.width = "250px";
+		}
+
+		function closeNav() {
+			document.getElementById("mySidenav").style.width = "0";
+		}
+		</script>
 		<script type="text/javascript">
 			
 		</script>
 		
 	</head>
 		<body>
+		<!-- Side Nav -->
 			<div id="mySidenav" class="sidenav">
 			  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 			  <a href="/">Home</a>
@@ -136,6 +147,7 @@
 				<div id="logo">
 					<h1><a href="/" id="logoLink">Memo.com</a></h1>
 				</div>
+				<!-- Top Nav -->
 				<div id="nav">
 					<ul>
 						<li><a href="/">Home</a></li>
@@ -158,16 +170,6 @@
 			</p>
 		</div>
 	</div>
-
-			<script>
-			function openNav() {
-				document.getElementById("mySidenav").style.width = "250px";
-			}
-
-			function closeNav() {
-				document.getElementById("mySidenav").style.width = "0";
-			}
-			</script>
 			
 		<center>
 		
