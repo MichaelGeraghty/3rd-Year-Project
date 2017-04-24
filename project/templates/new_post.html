@@ -155,14 +155,14 @@
 				
 			<h2>Add New Post</h2>
 			<p>
-				Enter the title of your memo your name and the content below. When finished click post.
+				Enter the title of your memo your name and the content of the memo below. When finished click post.
 			</p>
 			
 			<center>
 		<form action="/create/" method="Post" id="usrform">
 		<br>
 			<br>Title: <input type="text" name="title"><br><br>
-			User: <input type="text" name="text"><br>
+			User: <input type="text" placeholder="Anonymous" name="text"><br>
 			<br><textarea rows="4" cols="50" type="text" name="content" placeholder="Enter your post here" ></textarea><br>
 			<!-- calls the post method of create in models to post the blog to the database-->
 			<br><input type="submit" value="Post">
