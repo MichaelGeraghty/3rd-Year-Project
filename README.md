@@ -1,6 +1,7 @@
 # 3rd-Year-Project 
 To view the deployed web app 
 http://g00325746.pythonanywhere.com/
+To view a video that displays the app https://www.youtube.com/watch?v=7EHCJf1hPz0 on youtube.
 
 
 Dynamic web app involving a memo post system
